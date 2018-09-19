@@ -1,0 +1,8 @@
+
+INDEX_FILE=      searchengine_test/index.txt
+OUTPUT_FILE     =searchengine_test/output.txt
+QUERY_FILE   =   searchengine_test/query.txt
+
+# not used in this test, but we need to provide a value anyway
+RESTART_PROBABILITY=.5
+STEP_NUMBER = 1

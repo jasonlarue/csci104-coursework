@@ -1,0 +1,9 @@
+# My configuration file
+INDEX_FILE  =     ./google_index.txt
+# Here are some important parameters
+PI=3.14159  #circumference of a circle
+E=2.71828 # Base of the natural logarithm
+# The output file is given below
+OUTPUT_FILE = data/subdirectory/myoutput.txt
+QUERY_FILE = thingy.txt
+RESTART_PROBABILITY = 5.2

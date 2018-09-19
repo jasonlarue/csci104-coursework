@@ -1,0 +1,9 @@
+don't
+
+OUTGOING wiki/Mechanical.md
+or your constant
+INCOMING   wiki/Controls.md
+OUTGOING   wiki/Controls.md
+your old AND responsible roots
+PRINT wiki/Strategy.md
+OUTGOING wiki/Home.md

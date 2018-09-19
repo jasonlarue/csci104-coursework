@@ -1,0 +1,8 @@
+Bee
+INCOMING data/page2.txt
+OUTGOING data/page2.txt
+PRINT data/page2.txt
+OR Bee Hi
+AND HEllo World Hi
+AND
+Bee Hi

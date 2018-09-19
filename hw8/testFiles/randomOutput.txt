@@ -1,0 +1,7 @@
+Input file name: testFiles/random.txt
+Cache size: 25
+Left Rotations: 13307
+Right Rotations: 12104
+Total Rotations: 25411
+Cache Misses: 4962
+Number of random words: 5000

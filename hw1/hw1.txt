@@ -1,0 +1,57 @@
+Problem 1:
+
+a. Only number one and four (Asking the course staff for help) is acceptable behavior.
+
+b. Options 2,3 and 4 are correct policy for solving grade disputes.
+
+c. In lab 1, it is recommended to use Sublime.
+
+d. Option two (Each student has 3 late days of which only one can be used
+per HW) is the only correct answer.
+
+e. Options 2,3,4, and 5 are correct.
+
+
+Problem 2:
+
+a. Only option three, the git command line in Terminal, is supported by the
+course.
+
+b. Options one and two should be avoided.
+
+c. 1. git add hw1q2b.cpp
+   2. git log -n 3
+
+d. Git would prompt you for a commit message in the editor you specified in
+the config.
+
+e. git clone git@github.com:usc-csci104-spring2018/hw-jasonlar.git
+
+Problem 4:
+
+1. When you pass ([1,2,3,4,5],5) into funcA, the output is:
+1
+2
+3
+4
+5
+This output happens because nothing is printed until min == max, so the
+first call to funcB(a,0,4) doesn't print but calls B(a,0,2) and B(a,3,4).
+When B(a,0,2) is run, it doesn't print but calls B(a,0,1) and B(a,1,1). In
+B(a,0,1), min still doesn't equal max so we go one more layer deep by
+calling B(a,0,0). Once we get here, we print a[0] and then begin to trace back
+up the recursion tree. B(a,1,1) prints a[1], B(a,2,2) prints a[2], B(a,3,4)
+does not print but rather calls B(a,3,3) and B(a,4,4) which print a[3] and a[4]
+respectively.
+
+2. funcB will fail to terminate if min is greater than max, or for when
+min is a negative number. FuncB always terminates for other input values
+because funcB ensures that min eventually equals max by making
+mid = (min+max)/2 and then calling funcB(a,min,mid) and then funcB(a,mid+1,max).
+With these two recursive calls, min will always eventually equal max (unless
+given a negative min or min where min>max).
+
+3. When you call funcB(a,min,max), all the values from min to max inside of a
+get called. This is because funcB keeps calling itself recursively until min==
+max, and when it does it steps back through the remaining recursive calls to
+ensure that every other value in the range min-max is called once.

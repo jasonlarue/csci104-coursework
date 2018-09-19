@@ -1,0 +1,6 @@
+Input file name: testFiles/richard.txt
+Cache size: 250
+Left Rotations: 89360
+Right Rotations: 83837
+Total Rotations: 173197
+Cache Misses: 26776

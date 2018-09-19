@@ -1,0 +1,57 @@
+Problem 1:
+
+a. Status of README is unmodified
+
+b. Status of README is modified, status of fun_problem.txt is untracked
+
+c. Status of README and fun_problem.txt is staged
+
+d. Status of README and fun_problem.txt is modified
+
+e. Status of README is staged, status of fun_problem.txt is unmodified
+
+f. Status of README reverts from staged to modified, this is because if git
+detects a modification of a staged file it automatically unstages the file and
+classifies it as modified.
+
+Problem 3:
+
+a. A list of structs containing name of the dish, price, etc,
+because the order of the items are important in this case.
+
+b. A set of structs containing the name of the movie, year it was released, etc,
+because the order of the movies is not important.
+
+c. A map where the value is the book and the key is the ISBN, because you will
+need to be able to locate an book given its ISBN (key).
+
+d. A map where the value is a list of all movies produced in a given year, and
+the key is the year, because you will need to be able to locate all movies given
+a year (the key).
+
+e. A list of lists, the first list being the list of all the seasons which
+contains lists for each season of the show, and every list would contain
+structs of episodes containing the name of the episode, runtime, synopsis, etc.
+This way when you want to access the nth episode in the mth season, you can do
+so using only the indices of the lists.
+
+Problem 4:
+
+5,4,3,2,1 is returned. First, funcA contains a while loop that makes r the last
+element in the list, as this will be the beginning of the reversed list that
+will eventually be returned. Then, funcB(in) is called, which recursively calls
+itself until we're at the end of the list (element 5 in our case. I will be
+referring to the Node* objects as their value (Node* with value=5 just
+becomes 5) even though they are actually pointers, this just makes things easier
+to explain). funcB gets called one more time with 5->next (which equals NULL) as
+the input, but when funcB sees that it's input is NULL, it simply returns NULL.
+Now we're back up at the funcB call where the input is 5. The if statement
+fails as the p (the result of the recursive call with NULL) was NULL, so we
+simply return in, which was 5. Now at the funcB call where the input is 4, p
+(the result of the recursive call to 5) was 5, so 5's next is assigned to 4,
+then we return 4. One recursive call up, we assign 4's next as 3, then return 3,
+and we keep going until we're at the funcB call where the input was 1. We make
+2's next point to 1, then return 1 and end up back in funcA (in funcA,
+the 1 that we returned ends up in l). The last thing we do is make l's next
+NULL, as this element is now the end of our list, then we return r as it is the
+start of our list that is now reversed.

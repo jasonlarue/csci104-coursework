@@ -1,0 +1,52 @@
+Problem 2:
+
+a. The two inner for loops have run time of theta(n), and the for loop that
+contains the two inner for loops has a run time of theta(n), therefore the
+total first half of the program has a run time of theta(n^2). After the outer
+for loop, s should be empty, so the while loop doesn't run and therefore the
+entire code has a runtime of theta(n^2)?
+
+b. We start with curr = 0 and n = n (assume for now that n > 0). We know that
+curr <= 0, so func(n-1,n-1) gets called, which then triggers the else statement
+and decrements curr and runs again. This happens n times until curr = 0 again,
+at which point the (curr <= 0) conditional is tripped and func(n-1,n-1) is
+called again. This entire cycle keeps happening until n <= 0, meaning that in
+total the entire code has a runtime of theta(n^2).
+
+c. The first for loop populates the queue with numbers 1 through n. Inside the
+while loop, we remove elements from the queue until the front is 1. Once the
+front is one, we add n+1 through 2n to the queue, which takes theta(n) time.
+After this loop is finished, we remove the one that's at the front of the queue,
+meaning there's no 1s left in the queue and the conditional if(q.front == 1)
+will never trip, so the else part of the loop will just empty the queue. The
+entire code block has a run time of theta(n).
+
+d. The innermost for loop runs n times, because arr[i] == 0 is a conditional for
+the loop to run. Curr->value%i==0 will only be true n/i times, when it's
+true the loop has a runtime of theta(n) and when it's false the loop has a
+runtime of theta(1), so if it's only true n/i times the while loop has a runtime
+of theta(n log n). The outer for loop runs n times, meaning that the entire
+block of code has theta(n^2 log n).
+
+Problem 3:
+
+a. The worst case is if this->n equals this->max, because then bar is called
+which has runtime of theta(n^2), which is larger than foo's runtime of
+theta(log n). So worst case run time is theta(n^2).
+
+b. Because max is multiplied by two every time bar runs, we know that bar will
+run log n times. And because foo runs every time bar doesn't run, we know that
+foo will run n-(log n) times because log n is how many times bar runs.
+The amortized runtime is the number of times foo runs multiplied by its runtime
+plus the number of times bar runs multiplied by its runtime, all divided by the
+n, so we have (log n*n^2+n-log n * log n)/n, which when simplified equals
+theta(n log n).
+
+c. We can use the same equation from 2b, except we update the runtime of foo
+to be n log n, so we have: (log n*n^2+n-log n * n log n)/n, which when
+simplified equals theta(n log n).
+
+d. The worst sequence of calls is calling someFunc three times, then
+calling anotherFunc three times, then someFunc three times, then anotherFunc
+three times, and so on and so on. I don't know how to find the run time of
+this :(

@@ -1,0 +1,3 @@
+
+INDEX_FILE = crawler_test/seed.txt
+OUTPUT_FILE=crawler_test/output.txt

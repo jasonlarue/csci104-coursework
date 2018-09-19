@@ -1,0 +1,22 @@
+Restaurant has-a employee and has-a party
+
+The two pure virtual functions are howMuchTip() and calculatePay()
+
+Inside the Restaurant class, function getEmployees() simply returns member
+variable _employees, function computeGrossPay() iterates through _employees,
+calls getPay() for each employee, and sums the result (notice the owner's hourly
+wage is set to zero so that this function only calculates gross hourly pay of
+chefs, waiters and hosts), and function numberOfCustomersWaiterServes() calls
+getNumberOfCustomersServed() on the waiter that you pass as an argument.
+
+Classes reserved, walk-in, and celebrity all inherit from party as they all have
+a size, tableNumber, etc. and so that they all can implement the calculatePay
+function. I also made waiter, host, chef and owner inherit from employee. Even
+though the owner has no hourly wage, I chose to make the class inherit from
+employee. Even though the owner owns the restaurant, she still works there and
+is therefore still an employee. Furthermore, I figured it was convenient to have
+everyone who works at the restaurant be of the same type because if we were to
+continue implementing this scenario and make a function that reports hours
+worked by everyone at the restaurant, it would be easier to simply iterate
+through all employees (owner included) than have to iterate through all
+employees and then find hours worked for owner separately.

@@ -1,0 +1,13 @@
+>>(hi)
+((cat-cat)+dog)
+>>(cat-cat)
+(<<<<abc+>>>efg)
+(<<dagobah -(>>yoda+go ))
+(dagobah - dagob - oba - a)
+!!
+((<mccoy+sulu))
+(<xyz + x)
+(cat-cat)
+()
+hello
+abc+efg

@@ -1,0 +1,15 @@
+1
+data/page3.txt
+1
+data/page1.txt
+1
+data/page3.txt
+Hello world [hi]Table chair desK, t-bone steak. .helllloooooo
+2
+data/page2.txt
+data/page3.txt
+1
+data/page2.txt
+1
+data/page3.txt
+Invalid query

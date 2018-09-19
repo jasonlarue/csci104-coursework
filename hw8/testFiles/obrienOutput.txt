@@ -1,0 +1,6 @@
+Input file name: testFiles/obrien.txt
+Cache size: 25
+Left Rotations: 13089
+Right Rotations: 11970
+Total Rotations: 25059
+Cache Misses: 4646
